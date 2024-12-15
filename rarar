@@ -1,0 +1,24 @@
+-- Script to set the time to day and make the game bright in Roblox
+
+local Lighting = game:GetService("Lighting")
+
+-- Set the time of day to "Day"
+Lighting.TimeOfDay = "14:00:00"  -- This ensures it’s bright during the afternoon
+
+-- Adjusting lighting to make it extra bright
+Lighting.Ambient = Color3.fromRGB(255, 255, 255)  -- Bright white ambient light (sunlight effect)
+Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)  -- Strong outdoor ambient light
+Lighting.FogColor = Color3.fromRGB(255, 255, 255)  -- Clear sky-like fog (this also brightens the environment)
+
+-- Increase the global brightness by setting the exposure
+Lighting.Brightness = 2  -- Adjusts overall brightness (higher = brighter)
+
+-- Set the sunlight to a more intense level
+Lighting.SunIntensity = 1.5  -- Increases the sun's intensity for extra brightness
+
+-- Set the game's overall lighting to give a bright, sunny feel
+Lighting.GlobalShadows = false  -- Turns off shadows, which can make the game appear brighter
+Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)  -- Super bright outdoor lighting
+
+-- You can further adjust properties like "FogEnd" to create a clearer environment
+Lighting.FogEnd = 500  -- Adjusts the visibility of fog, ensuring clear, bright conditions
