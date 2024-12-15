@@ -1,4 +1,4 @@
--- Script to set the time to day and make the game bright in Roblox
+-- Script to set the time to day, make the game bright, and remove fog in Roblox
 
 local Lighting = game:GetService("Lighting")
 
@@ -20,5 +20,9 @@ Lighting.SunIntensity = 1.5  -- Increases the sun's intensity for extra brightne
 Lighting.GlobalShadows = false  -- Turns off shadows, which can make the game appear brighter
 Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)  -- Super bright outdoor lighting
 
--- You can further adjust properties like "FogEnd" to create a clearer environment
-Lighting.FogEnd = 500  -- Adjusts the visibility of fog, ensuring clear, bright conditions
+-- Disable fog completely
+Lighting.FogStart = 100000  -- Sets the fog start to a very large number, effectively removing it
+Lighting.FogEnd = 100000    -- Sets the fog end to the same large number, removing fog entirely
+
+-- Optional: Make sure there is no fog rendering
+Lighting.FogColor = Color3.fromRGB(255, 255, 255)  -- This can be left at white to maintain the bright, clear effect
